@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Slovenia Private Ride | Airport Transfers & Private Tours</title>
+
+<meta name="description" content="Private airport transfers, chauffeur services and tours in Slovenia. Car for 1-4 passengers and van for 5+ passengers.">
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+color:#222;
+background:#fff;
+line-height:1.6;
+}
+
+header{
+background:#111;
+color:#fff;
+padding:18px 20px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+header h1{
+margin:0;
+font-size:28px;
+}
+
+.lang{
+margin-top:10px;
+}
+
+.lang button{
+background:#333;
+color:#fff;
+border:1px solid #666;
+padding:7px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.hero{
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+color:#fff;
+text-align:center;
+padding:110px 20px;
+}
+
+.hero h2{
+font-size:clamp(32px,6vw,52px);
+line-height:1.15;
+max-width:950px;
+margin:0 auto 20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 25px;
+margin:6px;
+border-radius:9px;
+text-decoration:none;
+font-weight:bold;
+border:0;
+cursor:pointer;
+font-size:16px;
+}
+
+.dark{
+background:#111;
+color:#fff;
+}
+
+.green{
+background:#25D366;
+color:#fff;
+}
+
+.light{
+background:#fff;
+color:#111;
+border:2px solid #111;
+}
+
+.gold{
+background:#d4a017;
+color:#fff;
+}
+
+section{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+section h2{
+text-align:center;
+font-size:34px;
+margin-bottom:35px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+}
+
+.card{
+border:1px solid #ddd;
+border-radius:14px;
+padding:25px;
+background:#fff;
+box-shadow:0 4px 18px rgba(0,0,0,.07);
+}
+
+.card h3{
+margin-top:0;
+font-size:20px;
+}
+
+.price{
+font-size:26px;
+font-weight:bold;
+margin-top:12px;
+}
+
+.vehicle{
+text-align:center;
+border:2px solid #ddd;
+border-radius:14px;
+padding:30px;
+}
+
+.vehicle h3{
+font-size:25px;
+}
+
+.note{
+text-align:center;
+color:#666;
+margin-top:25px;
+}
+
+.booking{
+max-width:900px;
+}
+
+.booking-intro{
+text-align:center;
+color:#666;
+}
+
+form{
+background:#f5f5f5;
+border-radius:15px;
+padding:28px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+
+.field{
+display:flex;
+flex-direction:column;
+}
+
+.full{
+grid-column:1/-1;
+}
+
+label{
+font-weight:bold;
+margin-bottom:6px;
+}
+
+input,select,textarea{
+padding:13px;
+border:1px solid #ccc;
+border-radius:8px;
+font:inherit;
+background:#fff;
+}
+
+textarea{
+min-height:110px;
+resize:vertical;
+}
+
+.submit{
+width:100%;
+background:#25D366;
+color:#fff;
+border:0;
+padding:16px;
+border-radius:9px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+margin-top:18px;
+}
+
+.payment{
+text-align:center;
+background:#f8f8f8;
+border-radius:15px;
+padding:30px;
+margin-top:25px;
+}
+
+.info{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.info div{
+background:#f5f5f5;
+padding:22px;
+border-radius:12px;
+text-align:center;
+}
+
+.faq{
+max-width:850px;
+}
+
+details{
+border-bottom:1px solid #ddd;
+padding:18px 0;
+}
+
+summary{
+font-weight:bold;
+font-size:18px;
+cursor:pointer;
+}
+
+.contact{
+background:#f1f3f5;
+text-align:center;
+}
+
+footer{
+background:#111;
+color:#fff;
+text-align:center;
+padding:30px 20px;
+}
+
+footer a{
+color:#fff;
+}
+
+.ar{
+direction:rtl;
+}
+
+.ar .field{
+text-align:right;
+}
+
+@media(max-width:650px){
+.grid{
+grid-template-columns:1fr;
+}
+
+.full{
+grid-column:auto;
+}
+
+section{
+padding:45px 16px;
+}
+
+.hero{
+padding:75px 16px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Slovenia Private Ride</h1>
+
+<div class="lang">
+<button onclick="language('en')">🇬🇧 English</button>
+<button onclick="language('ar')">🇸🇦 العربية</button>
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h2 id="heroTitle">
+Private Airport Transfers & Tours in Slovenia
+</h2>
+
+<p id="heroText">
+Comfortable • Reliable • Door-to-Door
+</p>
+
+<a href="#booking" class="btn dark" id="bookBtn">
+BOOK NOW
+</a>
+
+<a href="https://wa.me/38640123214"
+class="btn green"
+target="_blank">
+WHATSAPP
+</a>
+
+<a href="tel:+38640123214"
+class="btn light">
+CALL NOW
+</a>
+
+</section>
+
+
+<section>
+
+<h2 id="vehicleTitle">Choose Your Vehicle</h2>
+
+<div class="cards">
+
+<div class="vehicle">
+
+<h3>🚗 Private Car</h3>
+
+<p id="carText">
+Comfortable private vehicle for individuals, couples and families.
+</p>
+
+<div class="price">
+1–4 passengers
+</div>
+
+</div>
+
+
+<div class="vehicle">
+
+<h3>🚐 Private Van</h3>
+
+<p id="vanText">
+Spacious private van for larger groups and extra luggage.
+</p>
+
+<div class="price">
+5+ passengers
+</div>
+
+<p><strong>Price on request</strong></p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>✈️ Airport Transfers</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Ljubljana Airport → Ljubljana</h3>
+<div class="price">€40</div>
+</div>
+
+<div class="card">
+<h3>Ljubljana Airport → Bled</h3>
+<div class="price">€75</div>
+</div>
+
+<div class="card">
+<h3>Ljubljana Airport → Bohinj</h3>
+<div class="price">€95</div>
+</div>
+
+<div class="card">
+<h3>Ljubljana Airport → Kranjska Gora</h3>
+<div class="price">€110</div>
+</div>
+
+<div class="card">
+<h3>Ljubljana Airport → Piran</h3>
+<div class="price">€130</div>
+</div>
+
+<div class="card">
+<h3>Ljubljana Airport → Portorož</h3>
+<div class="price">€150</div>
+</div>
+
+<div class="card">
+<h3>Ljubljana Airport → Trieste</h3>
+<div class="price">€160</div>
+</div>
+
+</div>
+
+<p class="note">
+Fixed price for a private car up to 4 passengers.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>🏙️ Ljubljana Center Transfers</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Ljubljana → Bled</h3>
+<div class="price">€100</div>
+</div>
+
+<div class="card">
+<h3>Ljubljana → Bohinj</h3>
+<div class="price">€130</div>
+</div>
+
+<div class="card">
+<h3>Ljubljana → Kranjska Gora</h3>
+<div class="price">€110</div>
+</div>
+
+<div class="card">
+<h3>Ljubljana → Piran</h3>
+<div class="price">€130</div>
+</div>
+
+<div class="card">
+<h3>Ljubljana → Portorož</h3>
+<div class="price">€150</div>
+</div>
+
+<div class="card">
+<h3>Ljubljana → Trieste</h3>
+<div class="price">€160</div>
+</div>
+
+<div class="card">
+<h3>Ljubljana → Postojna Cave</h3>
+<div class="price">€90</div>
+</div>
+
+<div class="card">
+<h3>Ljubljana → Lake Jasna</h3>
+<div class="price">€110</div>
+</div>
+
+</div>
+
+<p class="note">
+Custom destinations available up to approximately 350 km.
+Request a quote for destinations not listed.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>🌍 Custom Destinations</h2>
+
+<div class="card" style="text-align:center">
+
+<h3>Travel Anywhere You Need</h3>
+
+<p>
+Don't see your destination on our price list?
+No problem.
+Enter your destination in the booking form and we will provide a custom quote.
+</p>
+
+<a href="#booking" class="btn gold">
+GET A QUOTE
+</a>
+
+</div>
+
+</section>
+
+
+<section id="booking" class="booking">
+
+<h2 id="bookingTitle">
+📅 Book Your Private Ride
+</h2>
+
+<p class="booking-intro" id="bookingIntro">
+Complete the form and send your booking request directly to WhatsApp.
+We will confirm availability and the final price.
+</p>
+
+<form id="bookingForm">
+
+<div class="grid">
+
+<div class="field">
+<label id="nameLabel">Full Name *</label>
+<input id="name" required>
+</div>
+
+<div class="field">
+<label id="phoneLabel">WhatsApp / Phone *</label>
+<input id="phone" type="tel" required>
+</div>
+
+<div class="field">
+<label id="vehicleLabel">Vehicle *</label>
+
+<select id="vehicle" required>
+
+<option value="">Select vehicle</option>
+
+<option>
+Private Car — 1–4 passengers
+</option>
+
+<option>
+Private Van — 5+ passengers
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+<label id="passengerLabel">Passengers *</label>
+<input id="passengers" type="number" min="1" required>
+</div>
+
+<div class="field">
+<label id="pickupLabel">Pickup Location *</label>
+<input id="pickup" placeholder="Airport, hotel, address..." required>
+</div>
+
+<div class="field">
+<label id="destinationLabel">Destination *</label>
+<input id="destination" placeholder="Any city, hotel or address" required>
+</div>
+
+<div class="field">
+<label id="dateLabel">Date *</label>
+<input id="date" type="date" required>
+</div>
+
+<div class="field">
+<label id="timeLabel">Pickup Time *</label>
+<input id="time" type="time" required>
+</div>
+
+<div class="field full">
+<label id="luggageLabel">Luggage</label>
+<input id="luggage" placeholder="Example: 2 large + 2 cabin bags">
+</div>
+
+<div class="field full">
+<label id="flightLabel">Flight Number</label>
+<input id="flight" placeholder="Example: LH1234">
+</div>
+
+<div class="field full">
+<label id="childLabel">Child Seat Request</label>
+<input id="child" placeholder="Example: 1 child seat">
+</div>
+
+<div class="field full">
+<label id="messageLabel">Special Request</label>
+<textarea id="message" placeholder="Extra stop, special request..."></textarea>
+</div>
+
+</div>
+
+<button type="submit" class="submit" id="submitBtn">
+SEND BOOKING VIA WHATSAPP
+</button>
+
+</form>
+
+
+<div class="payment">
+
+<h3>💳 Secure Payment</h3>
+
+<p>
+After we confirm your booking and final price,
+we will send you a secure Stripe payment link.
+</p>
+
+<p>
+<strong>No Stripe account is required for the customer.</strong>
+</p>
+
+<button class="btn gold" type="button"
+onclick="alert('Stripe payment will be available after your booking is confirmed.')">
+PAY SECURELY
+</button>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>⭐ Why Choose Us?</h2>
+
+<div class="info">
+
+<div>
+<h3>🚗 Private</h3>
+<p>Your vehicle is reserved for your group.</p>
+</div>
+
+<div>
+<h3>📍 Door-to-Door</h3>
+<p>Pickup and drop-off at your requested locations.</p>
+</div>
+
+<div>
+<h3>📅 Easy Booking</h3>
+<p>Simple booking through WhatsApp or phone.</p>
+</div>
+
+<div>
+<h3>🌍 Custom Trips</h3>
+<p>Choose any destination and request a quote.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="faq">
+
+<h2>❓ FAQ</h2>
+
+<details>
+<summary>How do I book?</summary>
+<p>
+Complete the booking form and send it through WhatsApp.
+We will confirm availability and the final price.
+</p>
+</details>
+
+<details>
+<summary>Can I choose any destination?</summary>
+<p>
+Yes. Enter any destination in the booking form and request a quote.
+</p>
+</details>
+
+<details>
+<summary>How many passengers can travel?</summary>
+<p>
+Our private car is for 1–4 passengers.
+Our private van is for 5+ passengers.
+</p>
+</details>
+
+<details>
+<summary>How does payment work?</summary>
+<p>
+After we confirm your booking and price,
+we can send you a secure Stripe payment link.
+</p>
+</details>
+
+<details>
+<summary>Do I need a Stripe account to pay?</summary>
+<p>
+No. Customers can pay through the secure Stripe payment page without creating a Stripe account.
+</p>
+</details>
+
+</section>
+
+
+<section class="contact">
+
+<h2>📞 Contact Us</h2>
+
+<p>
+<strong>WhatsApp / Phone:</strong>
+<a href="tel:+38640123214">
++386 40 123 214
+</a>
+</p>
+
+<a href="https://wa.me/38640123214"
+class="btn green"
+target="_blank">
+WHATSAPP
+</a>
+
+<a href="tel:+38640123214"
+class="btn light">
+CALL NOW
+</a>
+
+</section>
+
+
+<footer>
+
+<p><strong>Slovenia Private Ride</strong></p>
+
+<p>
+Private Airport Transfers • Chauffeur Services • Private Tours
+</p>
+
+<p>
+<a href="tel:+38640123214">
++386 40 123 214
+</a>
+</p>
+
+<p>
+© 2026 Slovenia Private Ride. All rights reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+const text={
+
+en:{
+heroTitle:"Private Airport Transfers & Tours in Slovenia",
+heroText:"Comfortable • Reliable • Door-to-Door",
+bookBtn:"BOOK NOW",
+vehicleTitle:"Choose Your Vehicle",
+carText:"Comfortable private vehicle for individuals, couples and families.",
+vanText:"Spacious private van for larger groups and extra luggage.",
+bookingTitle:"📅 Book Your Private Ride",
+bookingIntro:"Complete the form and send your booking request directly to WhatsApp. We will confirm availability and the final price.",
+nameLabel:"Full Name *",
+phoneLabel:"WhatsApp / Phone *",
+vehicleLabel:"Vehicle *",
+passengerLabel:"Passengers *",
+pickupLabel:"Pickup Location *",
+destinationLabel:"Destination *",
+dateLabel:"Date *",
+timeLabel:"Pickup Time *",
+luggageLabel:"Luggage",
+flightLabel:"Flight Number",
+childLabel:"Child Seat Request",
+messageLabel:"Special Request",
+submitBtn:"SEND BOOKING VIA WHATSAPP"
+},
+
+ar:{
+heroTitle:"نقل خاص من وإلى المطارات وجولات في سلوفينيا",
+heroText:"مريح • موثوق • من الباب إلى الباب",
+bookBtn:"احجز الآن",
+vehicleTitle:"اختر سيارتك",
+carText:"سيارة خاصة مريحة للأفراد والأزواج والعائلات.",
+vanText:"فان خاص واسع للمجموعات الكبيرة والأمتعة الإضافية.",
+bookingTitle:"📅 احجز رحلتك الخاصة",
+bookingIntro:"املأ النموذج وأرسل طلب الحجز مباشرة عبر WhatsApp. سنؤكد التوفر والسعر النهائي.",
+nameLabel:"الاسم الكامل *",
+phoneLabel:"WhatsApp / الهاتف *",
+vehicleLabel:"السيارة *",
+passengerLabel:"عدد الركاب *",
+pickupLabel:"مكان الانطلاق *",
+destinationLabel:"الوجهة *",
+dateLabel:"التاريخ *",
+timeLabel:"وقت الانطلاق *",
+luggageLabel:"الأمتعة",
+flightLabel:"رقم الرحلة",
+childLabel:"طلب كرسي للأطفال",
+messageLabel:"طلب خاص",
+submitBtn:"إرسال الحجز عبر WhatsApp"
+}
+
+};
+
+
+function language(lang){
+
+const t=text[lang];
+
+for(const key in t){
+
+const el=document.getElementById(key);
+
+if(el) el.textContent=t[key];
+
+}
+
+if(lang==="ar"){
+
+document.body.classList.add("ar");
+document.documentElement.lang="ar";
+
+}else{
+
+document.body.classList.remove("ar");
+document.documentElement.lang="en";
+
+}
+
+}
+
+
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const v=id=>document.getElementById(id).value.trim();
+
+const message=
+
+`NEW BOOKING REQUEST
+
+Name: ${v("name")}
+Phone/WhatsApp: ${v("phone")}
+Vehicle: ${v("vehicle")}
+Passengers: ${v("passengers")}
+Pickup: ${v("pickup")}
+Destination: ${v("destination")}
+Date: ${v("date")}
+Time: ${v("time")}
+Luggage: ${v("luggage") || "Not specified"}
+Flight: ${v("flight") || "Not specified"}
+Child seat: ${v("child") || "Not requested"}
+Special request: ${v("message") || "None"}
+
+Please confirm availability and final price.`;
+
+window.open(
+"https://wa.me/38640123214?text="+encodeURIComponent(message),
+"_blank"
+);
+
+});
+
+</script>
+
+</body>
+</html>
